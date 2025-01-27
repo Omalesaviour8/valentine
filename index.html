@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom right, #ff7eb3, #ff758c);
+            font-family: 'Arial', sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 400px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: #333;
+        }
+
+        .card h1 {
+            font-size: 2rem;
+            color: #ff758c;
+            margin-bottom: 20px;
+        }
+
+        .card button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .yes {
+            background: #ff758c;
+            color: white;
+        }
+
+        .no {
+            background: #ccc;
+            color: #333;
+        }
+
+        .yes:hover {
+            background: #ff4f7c;
+        }
+
+        .no:hover {
+            background: #aaa;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Would You Be My Valentine? 💖</h1>
+        <button class="yes" onclick="handleYes()">Yes! ❤️</button>
+        <button class="no" onclick="handleNo()">No 😢</button>
+        <div id="message" class="message"></div>
+    </div>
+
+    <script>
+        function handleYes() {
+            const message = document.getElementById('message');
+            message.style.display = 'block';
+            message.style.color = '#ff758c';
+            message.textContent = "Yay! You made my day! 🥰";
+        }
+
+        function handleNo() {
+            const message = document.getElementById('message');
+            message.style.display = 'block';
+            message.style.color = '#aaa';
+            message.textContent = "Oh no, that's heartbreaking! 💔";
+        }
+    </script>
+</body>
+</html>
